@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/product/user")
+@RequestMapping("/product/user/v1")
 @RequiredArgsConstructor
 public class UserController {
 

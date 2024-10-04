@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/product/wishList")
+@RequestMapping("/product/wishList/v1")
 @RequiredArgsConstructor
 public class WishListController {
 
