@@ -7,13 +7,13 @@ spring:
     url: jdbc:postgresql://localhost:5432/product_01
     username: postgres
     password: root
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: update
-      properties:
-        hibernate:
-          format_sql: true
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-      show-sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
 
 

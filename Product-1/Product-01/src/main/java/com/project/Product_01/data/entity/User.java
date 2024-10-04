@@ -1,5 +1,6 @@
 package com.project.Product_01.data.entity;
 
+import com.project.Product_01.data.enums.UserRoles;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
@@ -39,7 +40,7 @@ public class User {
 
     @NotNull(message = "User role cannot be null")
     @Enumerated(EnumType.STRING)
-    private String userRole;
+    private UserRoles userRole;
 
 
 //    private Map<String,List<String>> wishList;
