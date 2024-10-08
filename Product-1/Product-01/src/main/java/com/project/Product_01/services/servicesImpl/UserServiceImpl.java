@@ -1,22 +1,29 @@
 package com.project.Product_01.services.servicesImpl;
 
+import org.modelmapper.ModelMapper;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
 import com.project.Product_01.dao.UserDao;
+import com.project.Product_01.data.dto.CreateUserDto;
 import com.project.Product_01.data.dto.ResponseStructure;
 import com.project.Product_01.data.entity.User;
 import com.project.Product_01.services.UserServices;
+import com.project.Product_01.utils.ResponseUtil;
+
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserServices {
 
     private final UserDao userDao;
+    private final ModelMapper modelMapper;
 
     @Override
-    public ResponseEntity<ResponseStructure> createUser(User user) {
-        return null;
+    public ResponseEntity<ResponseStructure> createUser(CreateUserDto createUser) {
+    	User user = modelMapper.map(createUser, User.class);
+        return ResponseUtil.getCreatedResponse(user);
     }
 
     @Override
@@ -25,7 +32,7 @@ public class UserServiceImpl implements UserServices {
     }
 
     @Override
-    public ResponseEntity<ResponseStructure> updateUser(User user) {
+    public ResponseEntity<ResponseStructure> updateUser(CreateUserDto user) {
         return null;
     }
 
