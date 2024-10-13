@@ -12,7 +12,7 @@ public interface UserServices {
 
     ResponseEntity<ResponseStructure> getUserById(Integer id);
 
-    ResponseEntity<ResponseStructure> updateUser(CreateUserDto user);
+    ResponseEntity<ResponseStructure> updateUser(Integer userId,CreateUserDto user);
 
     ResponseEntity<ResponseStructure> getAllUsers(int pageNo, int pageSize);
 

@@ -12,7 +12,7 @@ public interface UserDao {
 
     User getUserById(Integer id);
 
-    Page<User> GetAllUsers (Pageable pageable);
+    Page<User> getAllUsers (Pageable pageable);
 
     User updateUser(User user);
 
